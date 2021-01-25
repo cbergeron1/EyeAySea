@@ -5,7 +5,7 @@
 # Set email as TFE Var and pull it down
 resource "tfe_organization" "primary" {
   name  = "DioTFE"
-  email = "cjberger1993@outlook.com"
+  email = local.email
 }
 
 ################################
@@ -24,7 +24,7 @@ resource "tfe_workspace" "infrastructure" {
   vcs_repo {
     identifier     = "cbergeron1/EyeAySea"
     branch         = "main"
-    oauth_token_id = "ot-pKJVpVjwyP2Ytwff"
+    oauth_token_id = local.oauth_token
   }
 }
 

@@ -2,9 +2,11 @@
 # Locals Definition #
 #####################
 
-# locals {
-#   name = value
-# }
+locals {
+  email       = var.email
+  tfe_token   = var.TFE_Token
+  oauth_token = var.oAuth_Token_ID
+}
 
 ######################
 # Pull TFE Variables #
