@@ -9,7 +9,7 @@ terraform {
 }
 
 provider "tfe" {
-  token    = "smbW10HswTK2zA.atlasv1.saP40hLKkhvxnUthwcEHa6YngT9ldu7OZXFbGd0SnqdYB0fTHKtYLUMijzxkeyCSSqc"
+  token    = "jHjQ9RsNb19WSg.atlasv1.s2tO6Impxy3ddKGP8MXDn45hJ8EIOAYONUAkjjSMoOkl8Xx4fyRVMfzLtzp96hCk1a0"
 }
 
 resource "tfe_organization" "primary" {
