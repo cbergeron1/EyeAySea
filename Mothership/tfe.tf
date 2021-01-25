@@ -8,9 +8,13 @@ resource "tfe_organization" "primary" {
   email = "cjberger1993@outlook.com"
 }
 
+################################
+# Create Primary TFE Workspace #
+################################
+
 resource "tfe_workspace" "infrastructure" {
   name         = "IaC"
-  organization = "DioTFE"
+  organization = tfe_organization.primary.id
 
   auto_apply        = true
   terraform_version = "0.14.5"
@@ -22,4 +26,17 @@ resource "tfe_workspace" "infrastructure" {
     branch         = "main"
     oauth_token_id = "ot-pKJVpVjwyP2Ytwff"
   }
+}
+
+########################
+# Create TFE Variables #
+########################
+
+resource "tfe_variable" "primary" {
+  for_each     = var.sensitive_vars
+  key          = each.key
+  value        = each.value
+  category     = "terraform"
+  workspace_id = tfe_workspace.infrastructure.id
+  sensitive    = true
 }
