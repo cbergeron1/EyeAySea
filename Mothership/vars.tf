@@ -3,7 +3,7 @@
 #####################
 
 locals {
-  email       = var.email
+  email       = var.Email
   tfe_token   = var.TFE_Token
   oauth_token = var.oAuth_Token_ID
 }
