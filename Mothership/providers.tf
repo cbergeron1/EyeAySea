@@ -7,6 +7,11 @@ terraform {
     tfe = {
       version = "~> 0.24.0"
     }
+
+    # aws = {
+    #   source  = "hashicorp/aws"
+    #   version = "~> 3.0"
+    # }
   }
 
   required_version = ">= 0.14"
@@ -25,7 +30,15 @@ terraform {
 # AWS Provider #
 ################
 
+# Figure out how the assume role resource works
+# provider "aws" {
+#   region = "us-east-2"
 
+#   assume_role {
+#     role_arn = ""
+#     session_name = ""
+#   }
+# }
 
 ################
 # TFE Provider #
