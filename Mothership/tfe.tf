@@ -39,4 +39,10 @@ resource "tfe_variable" "primary" {
   category     = "terraform"
   workspace_id = tfe_workspace.infrastructure.id
   sensitive    = true
+
+  lifecycle {
+    ignore_changes = [
+      value,
+    ]
+  }
 }

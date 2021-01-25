@@ -15,8 +15,8 @@ variable "sensitive_vars" {
   description = "description"
 
   default = {
-    Email       = "NULL"
-    oAuth_Token = "NULL"
-    TFE_Token   = "NULL"
+    Email          = "NULL"
+    oAuth_Token_ID = "NULL"
+    TFE_Token      = "NULL"
   }
 }
