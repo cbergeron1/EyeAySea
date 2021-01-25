@@ -6,6 +6,14 @@
 #   name = value
 # }
 
+######################
+# Pull TFE Variables #
+######################
+
+variable "TFE_Token" {}
+variable "Email" {}
+variable "oAuth_Token_ID" {}
+
 ###################
 # TF Variable Map #
 ###################
