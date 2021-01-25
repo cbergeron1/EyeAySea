@@ -63,3 +63,12 @@ variable "tfe_workspace" {
 
   default = "IaC"
 }
+
+# variable "additional_workspaces" {
+#   type        = set(string)
+#   description = "Set of additional TFE Workspace names to create."
+#
+#   default = [
+#     ""
+#   ]
+# }
