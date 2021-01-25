@@ -22,7 +22,7 @@ resource "tfe_workspace" "infrastructure" {
 
   # Set oAuth Token to TFE Var and pull value
   vcs_repo {
-    identifier     = "cbergeron1/EyeAySea"
+    identifier     = local.github_identifier
     branch         = "main"
     oauth_token_id = local.oauth_token
   }
