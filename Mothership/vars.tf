@@ -7,7 +7,7 @@ locals {
   tfe_token         = var.TFE_Token
   oauth_token       = var.oAuth_Token_ID
   github_org        = var.github_org
-  github_repo       = var.github_repo
+  github_repo       = var.repo_name
   github_identifier = format("%s/%s", local.github_org, local.github_repo)
 }
 
