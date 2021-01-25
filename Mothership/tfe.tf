@@ -2,9 +2,8 @@
 # Create Primary Organization #
 ###############################
 
-# Set email as TFE Var and pull it down
 resource "tfe_organization" "primary" {
-  name  = "DioTFE"
+  name  = local.tfe_org
   email = local.email
 }
 
@@ -13,14 +12,13 @@ resource "tfe_organization" "primary" {
 ################################
 
 resource "tfe_workspace" "infrastructure" {
-  name         = "IaC"
+  name         = local.tfe_workspace
   organization = tfe_organization.primary.id
 
   auto_apply        = true
   terraform_version = "0.14.5"
   working_directory = "Mothership"
 
-  # Set oAuth Token to TFE Var and pull value
   vcs_repo {
     identifier     = local.github_identifier
     branch         = "main"
