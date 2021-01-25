@@ -1,6 +1,6 @@
 # Mothership
 
-This is the Captain, Commander, and Owner of all things related to my personal infrastructure. Here you will find all resources that ensure my entire infrastructure and code run successfully. This can range from TFE Resources, to Github resources.
+This is the Captain, Commander, and Owner of all things related to my personal infrastructure. Here you will find all resources that ensure my entire infrastructure and code run successfully. This can range from TFE Resources to Github Resources.
 
 # TODO
 
