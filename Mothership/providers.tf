@@ -59,5 +59,5 @@ provider "tfe" {
 ###################
 
 provider "github" {
-  token = local.ghe_token
+  token = local.github_token
 }
