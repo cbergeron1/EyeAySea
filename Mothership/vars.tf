@@ -6,9 +6,10 @@ locals {
   email             = var.Email
   tfe_token         = var.TFE_Token
   oauth_token       = var.oAuth_Token_ID
-  github_org        = var.github_org
-  github_repo       = var.repo_name
+  github_org        = var.Github_Org
+  github_repo       = var.Github_Repo
   github_identifier = format("%s/%s", local.github_org, local.github_repo)
+  github_token      = var.Github_Token
   tfe_org           = var.tfe_org
   tfe_workspace     = var.tfe_workspace
 }
@@ -20,6 +21,7 @@ locals {
 variable "TFE_Token" {}
 variable "Email" {}
 variable "oAuth_Token_ID" {}
+variable "Github_Token" {}
 
 ###################
 # TF Variable Map #
@@ -33,6 +35,7 @@ variable "sensitive_vars" {
     Email          = "NULL"
     oAuth_Token_ID = "NULL"
     TFE_Token      = "NULL"
+    Github_Token   = "NULL"
   }
 }
 

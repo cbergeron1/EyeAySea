@@ -8,6 +8,11 @@ terraform {
       version = "~> 0.24.0"
     }
 
+    # github = {
+    #   source = "integrations/github"
+    #   version = "4.3.1"
+    # }
+
     # aws = {
     #   source  = "hashicorp/aws"
     #   version = "~> 3.0"
@@ -53,3 +58,6 @@ provider "tfe" {
 # Github Provider #
 ###################
 
+# provider "gh" {
+#   token = local.ghe_token
+# }
