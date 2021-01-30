@@ -4,7 +4,7 @@
 
 resource "github_repository" "Ticker" {
   name        = "Ticker"
-  description = "Discord bot that pulls stock information about the provided ticker."
+  description = "Python Discord bot that pulls stock information about the provided ticker."
 
   visibility         = "private"
   has_issues         = true
