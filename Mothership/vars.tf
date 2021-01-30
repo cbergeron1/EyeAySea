@@ -9,7 +9,7 @@ locals {
   github_org        = var.github_org
   github_repo       = var.repo_name
   github_identifier = format("%s/%s", local.github_org, local.github_repo)
-  # github_token      = var.Github_Token
+  github_token      = var.Github_Token
   tfe_org           = var.tfe_org
   tfe_workspace     = var.tfe_workspace
 }
@@ -21,7 +21,7 @@ locals {
 variable "TFE_Token" {}
 variable "Email" {}
 variable "oAuth_Token_ID" {}
-# variable "Github_Token" {}
+variable "Github_Token" {}
 
 ###################
 # TF Variable Map #
