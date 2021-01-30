@@ -53,11 +53,6 @@ variable "github_names" {
       description = "Python Discord bot to pull stock information when passed a ticker."
       gitignore_template = "Python"
     },
-    {
-      name = "Ticker2"
-      description = "Python Discord bot to pull stock information when passed a ticker."
-      gitignore_template = "Python"
-    },
   ]
 }
 
