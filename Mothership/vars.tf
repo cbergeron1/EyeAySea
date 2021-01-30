@@ -39,6 +39,10 @@ variable "sensitive_vars" {
   }
 }
 
+###########################
+# Variables with Defaults #
+###########################
+
 variable "github_org" {
   type        = string
   description = "Github Organization name."
