@@ -58,6 +58,6 @@ provider "tfe" {
 # Github Provider #
 ###################
 
-provider "gh" {
+provider "github" {
   token = local.ghe_token
 }
