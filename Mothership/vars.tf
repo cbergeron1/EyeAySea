@@ -40,6 +40,23 @@ variable "sensitive_vars" {
 }
 
 ###########################
+# Github Repository Tuple #
+###########################
+
+variable "github_names" {
+  type = list(map(string))
+  description = "List of Github Repository Names/Descriptions/GitIgnore Template."
+
+  default = [
+    {
+      name = "Ticker"
+      description = "Python Discord bot to pull stock information when passed a ticker."
+      gitignore_template = "Python"
+    }
+  ]
+}
+
+###########################
 # Variables with Defaults #
 ###########################
 
