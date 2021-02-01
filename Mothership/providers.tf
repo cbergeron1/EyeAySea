@@ -49,7 +49,6 @@ terraform {
 # TFE Provider #
 ################
 
-# Turn token into TFE Variable and Pull
 provider "tfe" {
   token = local.tfe_token
 }
