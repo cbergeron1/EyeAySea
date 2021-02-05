@@ -50,8 +50,8 @@ variable "github_names" {
   default = [
     {
       name = "Ticker"
-      description = "Python Discord bot to pull stock information when passed a ticker."
-      gitignore_template = "Python"
+      description = "Javascript Discord bot to pull stock information when passed a ticker."
+      gitignore_template = "ExtJs"
     },
   ]
 }
