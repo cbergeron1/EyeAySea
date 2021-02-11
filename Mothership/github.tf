@@ -10,4 +10,10 @@ resource "github_repository" "Repos" {
   visibility         = "private"
   has_issues         = true
   gitignore_template = each.value.gitignore_template
+
+  lifecycle {
+    ignore_changes = [
+      gitignore_template,
+    ]
+  }
 }
