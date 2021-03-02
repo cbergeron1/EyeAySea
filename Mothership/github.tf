@@ -7,7 +7,7 @@ resource "github_repository" "Repos" {
   name        = each.key
   description = each.value.description
 
-  visibility         = "private"
+  visibility         = "public"
   has_issues         = true
   gitignore_template = each.value.gitignore_template
 
