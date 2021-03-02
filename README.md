@@ -4,4 +4,4 @@ Hi! This repository is the home for all of my personal Infrastructure as Code. I
 
 # Workspaces
 
-Each **folder** maps to a unique TFE workspace in my TFE Cloud account. There is a parent directory know as **Mothership**. This houses my different TFE Organization Creation and all TFE/Variable Creation.
+Each `folder` maps to a unique TFE workspace in my TFE Cloud account. There is a parent directory know as `Mothership`. This houses my different TFE Organization Creation and all TFE/Variable Creation.
