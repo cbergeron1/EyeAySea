@@ -1,0 +1,5 @@
+bucket_name: "carlton-test-bucket-yaml"
+bucket_acl: "private"
+
+bucket_name: "carlton-test-bucket-yaml-2"
+bucket_acl: "private"
