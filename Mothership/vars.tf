@@ -53,6 +53,21 @@ variable "github_names" {
       description = "Dotfiles live here."
       gitignore_template = "Python"
     },
+    {
+      name = "testTerraform1"
+      description = "Dotfiles live here."
+      gitignore_template = "Python"
+    },
+    {
+      name = "testTerraform2"
+      description = "Dotfiles live here."
+      gitignore_template = "Python"
+    },
+    {
+      name = "testTerraform3"
+      description = "Dotfiles live here."
+      gitignore_template = "Python"
+    },
   ]
 }
 

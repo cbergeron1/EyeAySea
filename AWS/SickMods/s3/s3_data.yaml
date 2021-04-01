@@ -1,0 +1,38 @@
+acl: "private"
+
+# List of Buckets
+buckets:
+  # RV-Core-Pipeline
+- bucket_name: "test-yaml-bucket"
+  force_destroy: true
+  lifecycle_rule:
+  - enabled: true
+    id: "IA"
+    prefix: "data-lake/master/"
+    transition:
+    - days: 30
+      storage_class: "STANDARD_IA"
+  - enabled: true
+    id: "Glacier"
+    prefix: "data-lake/master/"
+    transition:
+    - days: 60
+      storage_class: "GLACIER"
+
+- bucket_name: "test-yaml-bucket-2"
+  force_destroy: false
+  lifecycle_rule:
+  - enabled: true
+    id: "IA"
+    prefix: "data-lake/master/"
+    transition:
+    - days: 30
+      storage_class: "STANDARD_IA"
+
+- bucket_name: "mike-test"
+  lifecycle_rule:
+    - enabled: true
+    id: "Stephen"
+    transition:
+    - days: 30
+      storage_class: "GLACIER"
