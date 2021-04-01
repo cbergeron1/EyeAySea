@@ -7,9 +7,9 @@ resource "tfe_organization" "primary" {
   email = local.email
 }
 
-################################
-# Create Primary TFE Workspace #
-################################
+###################################
+# Create Mothership TFE Workspace #
+###################################
 
 resource "tfe_workspace" "infrastructure" {
   name         = local.tfe_workspace

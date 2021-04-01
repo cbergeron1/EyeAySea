@@ -85,5 +85,5 @@ variable "tfe_workspace" {
   type        = string
   description = "Name of the TFE Workspace you want to create."
 
-  default = "IaC"
+  default = "Mothership"
 }
