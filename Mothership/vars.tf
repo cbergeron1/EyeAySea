@@ -53,6 +53,11 @@ variable "github_names" {
       description = "Dotfiles live here."
       gitignore_template = "Python"
     },
+    {
+      name = "Terrafixit"
+      description = "I watch specific TF workspaces and tell you when they have failures and who dunnit."
+      gitignore_template = "Python"
+    },
   ]
 }
 
