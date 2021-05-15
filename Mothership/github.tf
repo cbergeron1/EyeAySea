@@ -3,7 +3,7 @@
 ###############################
 
 resource "github_repository" "Repos" {
-  for_each = { for gn in var.github_names : gn.name => gn }
+  for_each    = { for gn in var.github_names : gn.name => gn }
   name        = each.key
   description = each.value.description
 

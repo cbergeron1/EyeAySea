@@ -44,18 +44,18 @@ variable "sensitive_vars" {
 ###########################
 
 variable "github_names" {
-  type = list(map(string))
+  type        = list(map(string))
   description = "List of Github Repository Names/Descriptions/GitIgnore Template."
 
   default = [
     {
-      name = "dotfiles"
-      description = "Dotfiles live here."
+      name               = "dotfiles"
+      description        = "Dotfiles live here."
       gitignore_template = "Python"
     },
     {
-      name = "Terrafixit"
-      description = "I watch specific TF workspaces and tell you when they have failures and who dunnit."
+      name               = "Terrafixit"
+      description        = "I watch specific TF workspaces and tell you when they have failures and who dunnit."
       gitignore_template = "Python"
     },
   ]
