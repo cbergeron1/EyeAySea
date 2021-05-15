@@ -4,7 +4,7 @@
 
 terraform {
   required_version = ">= 0.14"
-  
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -14,7 +14,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region     = "us-east-1"
   access_key = ""
   secret_key = ""
 }
