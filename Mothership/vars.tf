@@ -58,6 +58,11 @@ variable "github_names" {
       description        = "I watch specific TF workspaces and tell you when they have failures and who dunnit."
       gitignore_template = "Python"
     },
+    {
+      name               = "DrainTheLake"
+      description        = "I delete Tenants out of the data-lake."
+      gitignore_template = "Go"
+    },
   ]
 }
 
