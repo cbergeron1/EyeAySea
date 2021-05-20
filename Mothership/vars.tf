@@ -60,12 +60,12 @@ variable "github_names" {
     },
     {
       name               = "terraform-provider-chewy"
-      description        = "I let you treat Chewy.com like it's Terraform resources and place orders."
+      description        = "The Terraform plugin for the Chewy provider."
       gitignore_template = "Go"
     },
     {
       name               = "terraform-provider-gamestop"
-      description        = "I let you treat Gamestop.com like it's Terraform resources and place orders."
+      description        = "The Terraform plugin for the Gamestop provider."
       gitignore_template = "Go"
     },
     {
