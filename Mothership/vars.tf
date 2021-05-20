@@ -58,6 +58,16 @@ variable "github_names" {
       description        = "I watch specific TF workspaces and tell you when they have failures and who dunnit."
       gitignore_template = "Python"
     },
+    {
+      name               = "terraform-provider-chewy"
+      description        = "I let you treat Chewy.com like it's Terraform resources and place orders."
+      gitignore_template = "Go"
+    },
+    {
+      name               = "terraform-provider-gamestop"
+      description        = "I let you treat Gamestop.com like it's Terraform resources and place orders."
+      gitignore_template = "Go"
+    }
   ]
 }
 
