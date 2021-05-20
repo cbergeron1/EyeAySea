@@ -67,6 +67,11 @@ variable "github_names" {
       name               = "terraform-provider-gamestop"
       description        = "I let you treat Gamestop.com like it's Terraform resources and place orders."
       gitignore_template = "Go"
+    },
+    {
+      name               = "DrainTheLake"
+      description        = "I delete Tenants out of the data-lake."
+      gitignore_template = "Go"
     }
   ]
 }
