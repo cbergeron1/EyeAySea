@@ -59,13 +59,8 @@ variable "github_names" {
       gitignore_template = "Python"
     },
     {
-      name               = "terraform-provider-chewy"
-      description        = "The Terraform plugin for the Chewy provider."
-      gitignore_template = "Go"
-    },
-    {
-      name               = "terraform-provider-gamestop"
-      description        = "The Terraform plugin for the Gamestop provider."
+      name               = "terraform-provider-tdameritrade"
+      description        = "The Terraform plugin for the TD Ameritrade provider."
       gitignore_template = "Go"
     },
     {
