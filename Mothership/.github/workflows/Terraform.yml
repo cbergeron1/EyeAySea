@@ -1,0 +1,39 @@
+name: 'Make Terraform'
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled]
+
+jobs:
+  terraform:
+    name: 'Terraform'
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v1
+      with:
+        terraform_version: 1.0.1
+        terraform_wrapper: false
+    
+    - name: Terraform fmt
+      id: fmt
+      run: terraform fmt
+      continue-on-error: true
+
+    - name: Pushing Docker Image
+      run: |
+        git add -A
+        git commit -m "Terraform Fmt"
+        git push
+
+    - name: Terraform Init
+      id: init
+      run: terraform init
+
+    - name: Terraform Validate
+      id: validate
+      run: terraform validate -no-color
