@@ -23,8 +23,8 @@ output "s3_data_json" {
 }
 
 locals {
-  s3_data_raw_yaml = yamldecode(file("${path.module}/s3_data.yaml"))
-  s3_data_raw_json = jsondecode(file("${path.module}/s3_data.json"))
+  s3_data_raw_yaml =    yamldecode(file("${path.module}/s3_data.yaml"))
+  s3_data_raw_json    = jsondecode(file("${path.module}/s3_data.json"))
 }
 
 resource "aws_s3_bucket" "s3" {
