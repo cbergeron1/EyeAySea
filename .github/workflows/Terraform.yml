@@ -1,0 +1,38 @@
+name: 'Make Terraform'
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled]
+
+jobs:
+  terraform:
+    name: 'Terraform'
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f
+      with:
+        ref: ${{ github.head_ref }}
+
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@3d8debd658c92063839bc97da5c2427100420dec
+      with:
+        terraform_version: 1.0.1
+        terraform_wrapper: false
+    
+    - name: Terraform fmt
+      id: fmt
+      run: terraform fmt
+
+    - uses: stefanzweifel/git-auto-commit-action@5dd17c3b53a58c1cb5eaab903826abe94765ccd6
+      with:
+        commit_message: Code wasn't formatted right, but I got you.
+
+    - name: Terraform Init
+      id: init
+      run: terraform init
+
+    - name: Terraform Validate
+      id: validate
+      run: terraform validate -no-color
