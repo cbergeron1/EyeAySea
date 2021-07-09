@@ -62,11 +62,6 @@ variable "github_names" {
       name               = "terraform-provider-tdameritrade"
       description        = "The Terraform plugin for the TD Ameritrade provider."
       gitignore_template = "Go"
-    },
-    {
-      name               = "DrainTheLake"
-      description        = "I delete Tenants out of the data-lake."
-      gitignore_template = "Go"
     }
   ]
 }
