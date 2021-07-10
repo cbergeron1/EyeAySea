@@ -16,7 +16,7 @@ resource "tfe_workspace" "infrastructure" {
   organization = tfe_organization.primary.id
 
   auto_apply        = true
-  terraform_version = "1.0.2"
+  terraform_version = "1.0.1"
   working_directory = "Mothership"
 
   vcs_repo {
