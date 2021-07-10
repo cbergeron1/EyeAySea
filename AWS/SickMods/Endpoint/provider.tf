@@ -3,7 +3,7 @@
 #######################
 
 terraform {
-  required_version = ">= 0.14"
+  required_version = ">= 1.0"
 
   required_providers {
     aws = {
@@ -12,10 +12,3 @@ terraform {
     }
   }
 }
-
-provider "aws" {
-  region     = "us-east-1"
-  access_key = ""
-  secret_key = ""
-}
-
