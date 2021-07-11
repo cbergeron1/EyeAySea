@@ -1,19 +1,3 @@
-#####################
-# Locals Definition #
-#####################
-
-locals {
-  email             = var.Email
-  tfe_token         = var.TFE_Token
-  oauth_token       = var.oAuth_Token_ID
-  github_org        = var.github_org
-  github_repo       = var.repo_name
-  github_identifier = format("%s/%s", local.github_org, local.github_repo)
-  github_token      = var.Github_Token
-  tfe_org           = var.tfe_org
-  tfe_workspace     = var.tfe_workspace
-}
-
 ######################
 # Pull TFE Variables #
 ######################

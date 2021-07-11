@@ -1,3 +1,13 @@
+locals {
+  tfe_org           = var.tfe_org
+  email             = var.Email
+  tfe_workspace     = var.tfe_workspace
+  oauth_token       = var.oAuth_Token_ID
+  github_org        = var.github_org
+  github_repo       = var.repo_name
+  github_identifier = format("%s/%s", local.github_org, local.github_repo)
+}
+
 ###############################
 # Create Primary Organization #
 ###############################

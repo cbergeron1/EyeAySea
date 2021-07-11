@@ -1,0 +1,25 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "Statement1",
+			"Effect": "Deny",
+			"Action": [
+				"ec2:RunInstances"
+			],
+			"Resource": [
+				"*"
+			],
+			"Condition": {
+				"ForAnyValue:StringNotLike": {
+					"ec2:InstanceType": [
+						"*.nano",
+						"*.small",
+						"*.micro",
+						"*.medium"
+					]
+				}
+			}
+		}
+	]
+}
