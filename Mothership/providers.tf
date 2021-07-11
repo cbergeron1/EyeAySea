@@ -36,13 +36,20 @@ terraform {
 # AWS Provider #
 ################
 
-# Figure out how the assume role resource works
 # provider "aws" {
 #   region = "us-east-2"
 
 #   assume_role {
-#     role_arn = ""
-#     session_name = ""
+#     role_arn     = "arn:aws:iam::084326137841:role/TerraformAdmin"
+#     session_name = "Terraform"
+#   }
+
+#   default_tags {
+#     tags = {
+#       Environment   = var.Environment
+#       Provisioner   = "Terraform"
+#       "AWS Account" = "DioAWS"
+#     }
 #   }
 # }
 

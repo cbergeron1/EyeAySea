@@ -2,12 +2,11 @@
 # Managed AWS Organizations #
 #############################
 
-resource "aws_organizations_organization" "DioAWS" {
-  feature_set = "ALL"
+# module "organization" {
+#   source = "../AWS/Organization"
 
-  enabled_policy_types = [
-    "AISERVICES_OPT_OUT_POLICY",
-    "SERVICE_CONTROL_POLICY",
-    "TAG_POLICY"
-  ]
-}
+#   new_organization = true
+
+#   role_name = "TerraformAdmin"
+#   parent_id = "r-cfh7"
+# }
