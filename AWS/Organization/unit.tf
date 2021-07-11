@@ -1,5 +1,20 @@
 locals {
   organizational_units = var.organizational_units == null ? [] : jsondecode(var.organizational_units)["units"]
+
+  default_org_policies = [
+    {
+      name        = "Tag Enforcement"
+      type        = "TAG_POLICY"
+      description = "Enforce specific Tags to meet compliance."
+      policy_name = "tag_enforcement.json"
+    },
+    {
+      name        = "EC2 Enforcement"
+      type        = "SERVICE_CONTROL_POLICY"
+      description = "Restrict all accounts to smaller EC2 as I'm a single person not a mega corp."
+      policy_name = "ec2_enforcement.json"
+    }
+  ]
 }
 
 resource "aws_organizations_organizational_unit" "unit" {
@@ -12,7 +27,7 @@ resource "aws_organizations_organizational_unit" "unit" {
 }
 
 resource "aws_organizations_policy" "policy" {
-  for_each = { for op in var.organizations_policies : op.name => op }
+  for_each = { for op in concat(var.organizations_policies, local.default_org_policies) : op.name => op }
 
   name = each.key
 
