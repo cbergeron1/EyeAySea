@@ -12,7 +12,7 @@ resource "aws_organizations_organization" "organization" {
 }
 
 resource "aws_organizations_account" "account" {
-  for_each = var.new_accounts
+  for_each = var.new_accounts[*]
 
   name  = each.key
   email = each.value
