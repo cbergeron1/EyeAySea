@@ -1,11 +1,30 @@
 {
   "tags": {
     "Environment": {
-      "tag_key": "Enviornment",
-      "tag_value": [
-        "Production",
-        "Non-Production"
-      ]
+      "tag_key": {
+        "@@assign": "Environment"
+      },
+      "tag_value": {
+        "@@assign": [
+          "Production",
+          "Non-Production"
+        ]
+      }
+    },
+    "AWS Account": {
+      "tag_key": {
+        "@@assign": "AWS Account"
+      }
+    },
+    "Provisioner": {
+      "tag_key": {
+        "@@assign": "Provisioner"
+      },
+      "tag_value": {
+        "@@assign": [
+          "Terraform"
+        ]
+      }
     }
   }
 }
