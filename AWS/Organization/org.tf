@@ -1,9 +1,8 @@
 locals {
   new_organization = var.new_organization ? 1 : 0
-  service_access   = formatlist("%s.amazonaws.com", var.aws_service_access_principals)
+  service_access   = var.aws_service_access_principals != null ? formatlist("%s.amazonaws.com", var.aws_service_access_principals) : null
 }
 
-// Resource Completed.
 resource "aws_organizations_organization" "organization" {
   count = local.new_organization
 
@@ -12,7 +11,6 @@ resource "aws_organizations_organization" "organization" {
   feature_set                   = var.feature_set
 }
 
-// Validate Parent_ID works as expected.
 resource "aws_organizations_account" "account" {
   for_each = var.new_accounts
 
