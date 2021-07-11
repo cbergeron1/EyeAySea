@@ -1,5 +1,9 @@
+locals {
+  organizational_units = var.organizational_units == null ? [] : jsondecode(var.organizational_units)["units"]
+}
+
 resource "aws_organizations_organizational_unit" "unit" {
-  for_each = toset(var.organizational_units)
+  for_each = toset(local.organizational_units)
 
   name      = each.key
   parent_id = var.new_organization ? aws_organizations_organization.organization[0].roots[0].id : var.parent_id
