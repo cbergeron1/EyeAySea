@@ -1,6 +1,7 @@
-##########################
-# Version Lock to Latest #
-##########################
+locals {
+  tfe_token    = var.TFE_Token
+  github_token = var.Github_Token
+}
 
 terraform {
   required_providers {
@@ -19,7 +20,7 @@ terraform {
     # }
   }
 
-  required_version = ">= 0.14"
+  required_version = ">= 1.0"
 
   backend "remote" {
     hostname     = "app.terraform.io"

@@ -1,0 +1,11 @@
+{
+  "tags": {
+    "Environment": {
+      "tag_key": "Enviornment",
+      "tag_value": [
+        "Production",
+        "Non-Production"
+      ]
+    }
+  }
+}
