@@ -1,6 +1,7 @@
 locals {
   new_organization = var.new_organization ? 1 : 0
   service_access   = var.aws_service_access_principals != null ? formatlist("%s.amazonaws.com", var.aws_service_access_principals) : null
+  new_accounts     = var.new_accounts == null ? {} : jsondecode(var.new_accounts)["accounts"]
 }
 
 resource "aws_organizations_organization" "organization" {
@@ -12,7 +13,7 @@ resource "aws_organizations_organization" "organization" {
 }
 
 resource "aws_organizations_account" "account" {
-  for_each = var.new_accounts[*]
+  for_each = local.new_accounts
 
   name  = each.key
   email = each.value
