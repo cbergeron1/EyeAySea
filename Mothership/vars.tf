@@ -6,6 +6,9 @@ variable "TFE_Token" {}
 variable "Email" {}
 variable "oAuth_Token_ID" {}
 variable "Github_Token" {}
+# variable "Environment" {}
+# variable "AWS_ACCESS_KEY_ID" {}
+# variable "AWS_SECRET_ACCESS_KEY" {}
 
 ###################
 # TF Variable Map #
@@ -16,10 +19,13 @@ variable "sensitive_vars" {
   description = "Map of Sensitive TFE Values."
 
   default = {
-    Email          = "NULL"
-    oAuth_Token_ID = "NULL"
-    TFE_Token      = "NULL"
-    Github_Token   = "NULL"
+    Email                 = "NULL"
+    oAuth_Token_ID        = "NULL"
+    TFE_Token             = "NULL"
+    Github_Token          = "NULL"
+    Environment           = "NULL"
+    AWS_ACCESS_KEY_ID     = "NULL"
+    AWS_SECRET_ACCESS_KEY = "NULL"
   }
 }
 
