@@ -26,6 +26,6 @@ resource "aws_organizations_policy" "policy" {
 resource "aws_organizations_policy_attachment" "unit" {
   for_each = [for op in aws_organizations_policy.policy : op.id]
 
-  policy_id = aws_organizations_policy.policy[each.key]
+  policy_id = aws_organizations_policy.policy[each.key].id
   target_id = var.parent_id
 }
