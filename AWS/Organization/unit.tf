@@ -14,7 +14,7 @@ resource "aws_organizations_policy" "policy" {
 
   type        = each.value.type
   description = each.value.description
-  content     = file("./Policies/${each.value.policy_name}")
+  content     = file("${path.module}/Policies/${each.value.policy_name}")
 
   tags = var.tags
 }
