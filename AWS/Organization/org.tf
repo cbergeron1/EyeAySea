@@ -19,7 +19,7 @@ resource "aws_organizations_account" "account" {
   email = each.value
 
   iam_user_access_to_billing = var.iam_user_access_to_billing
-  parent_id                  = var.new_organization ? aws_organizations_organization.organization[0].roots[0].id : null
+  parent_id                  = var.parent_id
   role_name                  = var.role_name
 
   tags = var.tags
