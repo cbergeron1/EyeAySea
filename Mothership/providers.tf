@@ -27,7 +27,7 @@ terraform {
     organization = "DioTFE"
 
     workspaces {
-      name = "IaC"
+      name = "Mothership"
     }
   }
 }
