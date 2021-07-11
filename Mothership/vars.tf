@@ -6,9 +6,9 @@ variable "TFE_Token" {}
 variable "Email" {}
 variable "oAuth_Token_ID" {}
 variable "Github_Token" {}
-# variable "Environment" {}
-# variable "AWS_ACCESS_KEY_ID" {}
-# variable "AWS_SECRET_ACCESS_KEY" {}
+variable "Environment" {}
+variable "AWS_ACCESS_KEY_ID" {}
+variable "AWS_SECRET_ACCESS_KEY" {}
 
 ###################
 # TF Variable Map #

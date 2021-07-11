@@ -14,10 +14,10 @@ terraform {
       version = "4.3.1"
     }
 
-    # aws = {
-    #   source  = "hashicorp/aws"
-    #   version = "~> 3.0"
-    # }
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.0"
+    }
   }
 
   required_version = ">= 1.0"
@@ -36,22 +36,22 @@ terraform {
 # AWS Provider #
 ################
 
-# provider "aws" {
-#   region = "us-east-2"
+provider "aws" {
+  region = "us-east-2"
 
-#   assume_role {
-#     role_arn     = "arn:aws:iam::084326137841:role/TerraformAdmin"
-#     session_name = "Terraform"
-#   }
+  assume_role {
+    role_arn     = "arn:aws:iam::084326137841:role/TerraformAdmin"
+    session_name = "Terraform"
+  }
 
-#   default_tags {
-#     tags = {
-#       Environment   = var.Environment
-#       Provisioner   = "Terraform"
-#       "AWS Account" = "DioAWS"
-#     }
-#   }
-# }
+  default_tags {
+    tags = {
+      Environment   = var.Environment
+      Provisioner   = "Terraform"
+      "AWS Account" = "DioAWS"
+    }
+  }
+}
 
 ################
 # TFE Provider #
